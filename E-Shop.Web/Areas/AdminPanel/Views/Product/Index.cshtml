@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+@model IEnumerable<E_Shop.Web.Areas.AdminPanel.Models.Product.IndexProductModel>
+
+<div id="add-new">
+    @Html.ActionLink("Add new product", "Create", "Product", new { @class = "btn btn-default" })
+</div>
+
+<div class="grid-container">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="grid-container-admin">
+            <div>       
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)">
+            </div>
+            <div class="product-name">
+                @Html.DisplayFor(modelItem => item.Name)
+                <div>
+                Size:@Html.DisplayFor(modelItem => item.Size) <br>
+               Color: @Html.DisplayFor(modelItem => item.Color)
+                </div>
+            </div>
+            <div class="price">
+            @Html.DisplayFor(modelItem => item.Price) $
+                <div>
+                    @Html.ActionLink("Delete", "Delete", "Product", new { id = item.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Edit", "Edit", "Product", new { id = item.Id }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>

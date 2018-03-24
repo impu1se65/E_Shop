@@ -1,0 +1,58 @@
+﻿@model IEnumerable<E_Shop.BLL.DTOs.AdminOrderDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="order order-admin-grid-container">
+        <div>User email: @Html.DisplayFor(modelItem=>item.Email)</div>
+        <div>Order date: @Html.DisplayFor(modelItem => item.OrderDate)</div>
+        <div>
+            Order status:  @Html.Action("ChangeOrderStatus", new E_Shop.Web.Areas.AdminPanel.Models.Order.ChangeOrderStatusModel
+    {
+        Id = item.Id,
+        OrderStatus=item.OrderStatus,
+    })
+
+        </div>
+        <div> Total price: @Html.DisplayFor(modelItem => item.TotalCost) $</div>
+        <div class="order-products-list">
+            Products count: @Html.DisplayFor(modelItem => item.OrderItems.ToList().Count) (clickable)
+
+            <div id="hide">
+                @foreach (var innerItem in item.OrderItems)
+
+        {
+            <div class="order-admin-grid-container1">
+                <div>
+                    <img src="@Html.DisplayFor(modelItem => innerItem.PhotoUrl)">
+                </div>
+                <div class="order-prod-info">
+                    <div class="order-price">Sub price: @Html.DisplayFor(modelItem => innerItem.Price) $</div>
+                    <div class="order-price">Unit price: @Html.DisplayFor(modelItem => innerItem.SubPrice) $</div>
+
+                    <div class="order-productName">@Html.DisplayFor(modelItem => innerItem.Name) </div>
+                    <div class="order-quantity">Quantity: @Html.DisplayFor(modelItem => innerItem.Quantity)</div>
+                    <div class="order-size">Size: @Html.DisplayFor(modelItem => innerItem.Size) </div>
+                </div>
+            </div>
+
+}
+            </div>
+        </div>
+
+    </div>
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".order-products-list").click(function () {
+            $(this).children().toggle(700);
+        });
+    });
+</script>

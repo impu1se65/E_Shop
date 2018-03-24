@@ -1,0 +1,18 @@
+﻿@model E_Shop.Web.Areas.AdminPanel.Models.Customer.BanViewModel
+
+@using (Html.BeginForm("Index", "Customer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input name="Id" value="@Model.Id" type="hidden" />
+
+    @Html.DropDownListFor(modelItem => Model.IsBanned, @Model.BanState, new { onchange = "this.form.submit();", @class = "form-control" })
+}
+
+<script>
+    var confirms = function () {
+        var result = confirm("Do you want banned user?");
+        if (result) {
+            this.form.submit();
+        }
+    }
+    </script>

@@ -1,0 +1,45 @@
+﻿
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 22px;
+}
+
+
+.entry-title {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-weight: 400;
+    color: #111;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+li, a {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+.form-inline .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.control-label {
+    color: #333333;
+}

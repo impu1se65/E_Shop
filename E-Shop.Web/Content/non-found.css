@@ -1,0 +1,39 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* {
+    cursor: url('https://puu.sh/j1a8v/067742b89d.ico'), default;
+}
+
+body  {
+    background: #f2f2f2;
+ 
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+h1 {
+    margin-top: 30px;
+    color: black;
+}
+
+#err-icon {
+    font-size: 80pt;
+    color: #bdc3c7;
+    margin-top: 150px;
+    text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+    -webkit-transition: 0.5s;
+}
+
+    #err-icon:hover {
+        -webkit-transform: scale(1.1);
+        color: #e74c3c;
+        text-shadow: 0px 3px 0px rgba(192, 57, 43, 1);
+    }
+
+p {
+    color: black;
+    font-weight: bold;
+}
+li ,a {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}

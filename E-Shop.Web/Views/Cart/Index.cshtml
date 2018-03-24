@@ -1,0 +1,45 @@
+﻿@model E_Shop.BLL.DTOs.CartDTO
+
+@{
+    ViewBag.Title = "Your cart";
+}
+<div class="cart-size">@ViewBag.isSuccess</div>
+
+<div id="cart">
+<div class="make-order-block">
+    <div class="cart-total-price">Total price: @Model.totalPrice $</div>
+
+    @using (Html.BeginForm("MakeOrder", "Account", FormMethod.Post))
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+            <input type="submit" value="Make order" class="btn btn-success custom" />
+        }
+        else
+        {
+                <input type="submit" value="User must be authorized" class="btn btn-success custom" disabled="disabled" />
+        }
+    }
+    <div id="order-make" style="display:none;">Order was made.Check your order list.</div>
+</div>
+
+@foreach (var item in Model.ProductOrders)
+{
+<div class="cart-grid-container">
+
+    <div>
+        <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)">
+    </div>
+    <div>
+        <div class="cart-price">Price: @Html.DisplayFor(modelItem => item.SubPrice) $</div>
+        <div class="cart-sub-price">Unit price: @Html.DisplayFor(modelItem => item.Price) $</div>
+        <div class="cart-product-name">@Html.DisplayFor(modelItem => item.Name)  </div>
+        <div class="cart-quantity">Quantity: @Html.DisplayFor(modelItem => item.Quantity)</div>
+        <div class="cart-size">Size: @Html.DisplayFor(modelItem => item.Size)</div>
+
+    </div>
+    @Html.ActionLink("Remove", "RemoveProductFromCart", new { area = "", id = item.Id }, new { @class = "btn btn-primary remove" })
+
+</div>
+}
+    </div>

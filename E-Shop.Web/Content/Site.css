@@ -1,0 +1,465 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.navbar-right {
+    font-size: 16px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.register {
+    font-size:18px;
+    margin-top:10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 26% 26% 26% 26%;
+    grid-gap: 15px 15px;
+    justify-content: center;
+    margin-top:1%;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-rows: 35% 60px 20px;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 5px;
+}
+.grid-container-admin {
+    display: grid;
+    grid-template-rows: 35% 80px 60px;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 5px;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+.product-name {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.grid-container-details {
+    padding-top: 10px;
+    width: 100%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 15px 15px;
+    justify-content: center;
+}
+
+    .grid-container-details > div {
+        padding-left: 30px;
+    }
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-name-details {
+    font-size: 26px;
+    padding-top: 30px;
+}
+
+.price-details {
+    padding-top: 10px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.description-details {
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.color-details {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.category-details {
+    padding-top: 10px;
+    font-size: 18px;
+    padding-bottom:10px;
+}
+
+.size-details {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: "futura-pt-n4", "futura-pt", Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+    display: inline;
+}
+#size {
+    width: 80px;
+    height: 42px;
+    font-size: 18px;
+}
+.details {
+    margin-top:30px;
+}
+.quantity-details {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    display: inline;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.quantity-details input {
+    width: 60px;
+    height: 42px;
+    line-height: 1.65;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding-left: 20px;
+    border: 1px solid #eee;
+}
+
+.quantity-details input:focus {
+    outline: 0;
+}
+
+.form-control {
+    min-width: 50px;
+    width: auto;
+}
+
+
+#price-select {
+
+    font-size: 18px;
+}
+.button-details {
+    margin-top: 80px;
+}
+.custom 
+{
+    width: 100% !important;
+    font-size:16px;
+}
+
+.input-price {
+    font-size:16px;
+    width: 60px !important;
+}
+.sort-menu {
+    margin-top: 16px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.search {
+    margin-top: 0;
+    margin-left: 40px;
+    margin-bottom:5px;
+    font-size:16px;
+}
+    .search > input {
+        font-size:16px;
+    }
+    .search > input[type=text] {
+        border: 2px solid #5c5c5c;
+        background-color: #f2f2f2;
+        width: 200px;
+        margin-right: 10px;
+    }
+
+        .search > input[type=submit] {
+            background-color: #f2f2f2;
+            height: 35px;
+        }
+        .search > input[type=submit]:hover {
+            border: 2px solid #5c5c5c;
+        }
+
+
+        .form-group1 {
+            float: right;
+        }
+#input-price > label {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cart-grid-container {
+    width: 500px;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    background-color: #f2f2f2;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+.menu {
+    background-color: #f2f2f2;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-left:-8%;
+    width: 116.15%;
+    height:3%
+ 
+}
+  
+.menus {
+    padding-left: 40px;
+    padding-right:40px;
+}
+    .menus > select {
+        margin-bottom: 1em;
+        padding: .25em;
+        border: 0;
+        border-radius:0;
+        border-top: 2px solid #5c5c5c;
+        border-bottom: 2px solid #5c5c5c;
+        background-color: #f2f2f2;
+        margin-right:10px;
+    }
+
+        .menus > select:focus {
+            outline: 0;
+            border: 2px solid #5c5c5c;
+        }
+
+        .menus > select:active {
+            outline: 0;
+            border: 2px solid #5c5c5c;
+        }
+
+.form-group1 > input[type=number] {
+    margin-top: 16px;
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 2px solid #5c5c5c;
+    background-color: #f2f2f2;
+}
+.form-group1 > input[type=submit] {
+margin:0;
+margin-left:5px;
+    background-color: #f2f2f2;
+    height:35px;
+}
+    .form-group1 > input[type=submit]:hover {
+        border: 2px solid #5c5c5c;
+    }
+
+   
+
+.cart-price {
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.cart-sub-price {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+.cart-total-price {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.cart-product-name {
+    font-size: 18px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.cart-quantity{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.cart-size {
+    font-size: 18px;
+    margin-top: 5px;
+}
+.cart-grid-container > div {
+    margin-right: 20px;
+}
+
+.make-order-block {
+    position: fixed;
+    margin-top: 50px;
+    top: 50px;
+    right: 15%;
+    background-color: #f2f2f2;
+    color: black;
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+}
+.remove {
+    margin-top:2px;
+    width:500px !important;
+}
+#cart {
+    margin-bottom:20px;
+}
+
+
+
+
+.order {
+    padding: 10px 10px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-size: 18px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(40, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(40,25,25,0.4);
+    -webkit-box-shadow: 0 1px 3px rgba(40, 25, 25, 0.4);
+}
+
+.order-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    grid-gap: 15px 15px;
+}
+
+.order-grid-container1 {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-color: white;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.order-admin-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 40%;
+    grid-gap: 10px 10px;
+}
+
+.order-admin-grid-container1 {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-color: white;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.order-prod-info {
+    margin-left:5px;
+}
+#product-count {
+    text-decoration:underline;
+}
+#hide {
+    display: none;
+}
+
+.prod-info {
+    margin-left: 10px;
+}
+
+    .prod-info > div {
+        margin-bottom: 5px;
+    }
+
+#add-new {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    font-size: 18px;
+}
+
+.custom-form {
+    font-size:16px;
+}
+.custom-width {
+    width:300px;
+}
+
+
+.grid-container-customer-admin {
+    padding: 10px 10px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-size: 18px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(40, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(40,25,25,0.4);
+    -webkit-box-shadow: 0 1px 3px rgba(40, 25, 25, 0.4);
+    width: 95%;
+    display: grid;
+    grid-template-columns: 24% 24% 27% 12% 10%;
+    grid-gap:5px 5px;
+}
+
+
+
+
+

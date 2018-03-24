@@ -1,0 +1,10 @@
+﻿@model E_Shop.Web.Areas.AdminPanel.Models.Error.ErrorViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/Content/non-found.css")
+<i id="err-icon" class="fa fa-exclamation-circle"></i>
+<h1>@Model.ErrorMessage</h1>
+

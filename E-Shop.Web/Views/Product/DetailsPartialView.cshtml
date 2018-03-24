@@ -1,0 +1,35 @@
+﻿@model E_Shop.Web.ViewModels.Product.AddProductToCartModel
+@using (Html.BeginForm("AddProductToCart", "Product",new { area = "" }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-inline details">
+        <div class="size-details">
+            Size:
+            @Html.DropDownListFor(model => model.ProductId, Model.Sizes, new { @class = "form-control", id = "size" })
+            @Html.ValidationMessageFor(model => model.ProductId)
+
+        </div>
+
+        <div class="quantity-details">
+            Quantity:@Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { id = "quantity", @class = "form-control", @type = "number", @min = "1", @max = "100", @step = "1" } })
+            @Html.ValidationMessageFor(model => model.Quantity)
+        </div>
+    </div>
+    <div class="button-details">
+        <input type="submit" class="btn btn-success btn-block custom" value="Add to cart" />
+        @Html.HiddenFor(model => model.ProductAdded)
+        <div id="product-text-added" class="size-details" style="display:none;">
+            Product was added to cart.
+        </div>
+    </div>
+
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var product_added = $("#ProductAdded").val();
+        if (product_added == "True") {
+            $("#product-text-added").fadeIn(2000).delay(3000).fadeOut(2000);
+        }
+    });
+</script>

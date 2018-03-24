@@ -1,0 +1,22 @@
+﻿@model E_Shop.Web.ViewModels.Product.DetailsProductModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="grid-container-details">
+    <div>
+        <img src="@Html.DisplayFor(modelItem =>Model.PhotoUrl)" />
+    </div>
+    <div>
+        <div class="product-name-details"> @Html.DisplayFor(modelItem => Model.Name) </div>
+        <div class="price-details">@Html.DisplayFor(modelItem => Model.Price) $</div>
+        <div class="description-details">
+            @Html.DisplayFor(modelItem => Model.ProductDetails)
+        </div>
+        <div class="color-details"> Color: @Html.DisplayFor(modelItem => Model.Color) . </div>
+        <div class="category-details">Category: @Html.DisplayFor(modelItem => Model.Category) . </div>
+
+    @Html.Action("DetailsPartialView",  new E_Shop.Web.ViewModels.Product.AddProductToCartModel() { Sizes=Model.Sizes,Quantity=1,ProductAdded=Model.ProductAdded})
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@model E_Shop.Web.Areas.AdminPanel.Models.Order.ChangeOrderStatusModel
+
+@using (Html.BeginForm("Index", "Order", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input name="Id" value="@Model.Id" type="hidden" />
+    @Html.HiddenFor(modelItem => Model.Id)
+    @Html.EnumDropDownListFor(modelItem => Model.OrderStatus, new { onchange = "this.form.submit();", @class = "form-control" })
+}
+@Html.Hidden("MyEnumTemp", (int)Model.OrderStatus)
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#OrderStatus").val($("#MyEnumTemp").val());
+    });
+</script>

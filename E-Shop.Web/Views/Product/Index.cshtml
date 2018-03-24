@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model E_Shop.Web.ViewModels.Product.IndexViewModel
+@using E_Shop.Web.Util;
+
+@Html.Action("SortMenu", new E_Shop.Web.ViewModels.Product.IndexPartialView
+{
+    OrderParam = Model.OrderParam,
+    CategoryParam = Model.CategoryParam,
+    ColorParam = Model.ColorParam,
+    SizeParam = Model.SizeParam,
+    MinPrice = Model.MinPrice,
+    MaxPrice = Model.MaxPrice,
+    SearchQuery = Model.SearchQuery,
+    MultipleCategoriesList = new MultiSelectList(new List<SelectListItem>() { new SelectListItem { Value = "1", Text = "1" } })
+})
+
+<div class="grid-container">
+
+    @foreach (var item in Model.Products)
+    {
+
+        <div class="grid-container1">
+            <div>
+                <a href='@Url.Action("Details", "Product",new { area="",id=item.Id})'>
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)">
+                </a>
+            </div>
+            <div class="product-name">@Html.DisplayFor(modelItem => item.Name)</div>
+            <div class="price">@Html.DisplayFor(modelItem => item.Price) $</div>
+        </div>
+
+    }
+
+</div>
+<div class="btn-group">
+    @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+</div>

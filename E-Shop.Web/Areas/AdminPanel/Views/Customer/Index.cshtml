@@ -1,0 +1,43 @@
+﻿@model List<E_Shop.Web.Areas.AdminPanel.Models.Customer.CustomerViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+
+        <div class="grid-container-customer-admin">
+
+            <div>
+                @Html.DisplayFor(modelItem => modelItem[i].Email)
+            </div>
+
+            <div>
+                @Html.DisplayFor(modelItem => modelItem[i].Name)
+            </div>
+
+            <div>
+                @Html.DisplayFor(modelItem => modelItem[i].Address)
+            </div>
+
+            <div>
+                Orders count:
+                @Html.DisplayFor(modelItem => modelItem[i].OrderCount)
+            </div>
+            <div>
+
+                @Html.Action("BanPartialView",new E_Shop.Web.Areas.AdminPanel.Models.Customer.BanViewModel
+           {
+               Id=Model[i].Id,
+               BanState=Model[i].BanState,
+               IsBanned=Model[i].IsBanned,
+           })
+          
+              
+            </div>
+        </div>
+
+        }
+   
