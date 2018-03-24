@@ -13,7 +13,6 @@
     MinPrice = Model.MinPrice,
     MaxPrice = Model.MaxPrice,
     SearchQuery = Model.SearchQuery,
-    MultipleCategoriesList = new MultiSelectList(new List<SelectListItem>() { new SelectListItem { Value = "1", Text = "1" } })
 })
 
 <div class="grid-container">
@@ -34,6 +33,4 @@
     }
 
 </div>
-<div class="btn-group">
-    @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
-</div>
+

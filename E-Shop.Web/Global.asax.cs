@@ -17,19 +17,24 @@ namespace E_Shop.Web
     {
         protected void Application_Start()
         {
+
+            AutofacConfig.ConfigureContainer();
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            ModelValidatorProviders.Providers.Remove(
+            /*ModelValidatorProviders.Providers.Remove(
             ModelValidatorProviders.Providers.OfType<DataAnnotationsModelValidatorProvider>().First());
-
+            */
+           
+/*
             NinjectModule eShopModule = new EShopModule();
             NinjectModule serviceModule = new ServiceModule("DefaultConnection");
             var kernel = new StandardKernel(eShopModule, serviceModule);
             DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
-
+*/
         }
     }
 }

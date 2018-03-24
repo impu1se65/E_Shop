@@ -135,7 +135,7 @@ namespace E_Shop.Web.Controllers
                     item.Selected = true;
             }
 
-          MultiSelectList multiple = new MultiSelectList(menu.Categories);
+        //  MultiSelectList multiple = new MultiSelectList(menu.Categories);
 
             IndexPartialView view = new IndexPartialView
             {
@@ -143,7 +143,6 @@ namespace E_Shop.Web.Controllers
                 CategoriesList=categoriesMenu,
                 ColorsList=colorsMenu,
                 SizesList=sizesMenu,
-                MultipleCategoriesList=multiple,
             };
 
             return PartialView("SortMenuIndex", view);

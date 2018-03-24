@@ -9,7 +9,7 @@
             @Html.DropDownListFor(model => model.SizeParam, Model.SizesList, new { onchange = "this.form.submit();", @class = "form-control sort-menu" })
             @Html.DropDownListFor(model => model.CategoryParam, Model.CategoriesList, new { onchange = "this.form.submit();", @class = "form-control sort-menu" })
             @Html.DropDownListFor(model => model.ColorParam, Model.ColorsList, new { onchange = "this.form.submit();", @class = "form-control sort-menu" })
-            @Html.DropDownListFor(model => model.MultipleParam, Model.MultipleCategoriesList, new { @class = "form-control sort-menu", multiple="multiple" })
+            <!--  Html.DropDownListFor(model => model.MultipleParam, Model.MultipleCategoriesList, new { class = "form-control sort-menu", multiple="multiple" })-->
             <div class="form-group form-group1">
                 <span id="price-select">Price:</span>
                 @Html.EditorFor(model => model.MinPrice, new { htmlAttributes = new { @class = "form-control input-price", @placeholder = "min value" } })
